@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sunchangqing/CLionProjects/datastructure/headers/common/Constants.h
+stdio.h
+-
+mm_malloc.h
+-
+stdlib.h
+-
+
+/Users/sunchangqing/CLionProjects/datastructure/headers/list/CLinkList.h
+../common/Constants.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/common/Constants.h
+
+/Users/sunchangqing/CLionProjects/datastructure/headers/queue/LinkQueue.h
+../common/Constants.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/common/Constants.h
+
+/Users/sunchangqing/CLionProjects/datastructure/headers/stack/LinkStack.h
+../common/Constants.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/common/Constants.h
+
+/Users/sunchangqing/CLionProjects/datastructure/headers/tree/BiTree.h
+../common/Constants.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/common/Constants.h
+
+/Users/sunchangqing/CLionProjects/datastructure/main.cpp
+headers/list/CLinkList.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/list/CLinkList.h
+headers/tree/BiTree.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/tree/BiTree.h
+headers/stack/LinkStack.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/stack/LinkStack.h
+headers/queue/LinkQueue.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/queue/LinkQueue.h
+
+/Users/sunchangqing/CLionProjects/datastructure/sources/queue/LinkQueue.cpp
+../../headers/queue/LinkQueue.h
+/Users/sunchangqing/CLionProjects/datastructure/headers/queue/LinkQueue.h
+

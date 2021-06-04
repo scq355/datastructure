@@ -1,0 +1,8 @@
+//
+// Created by Jimmy on 2021/6/3.
+//
+
+#ifndef DATASTRUCTURE_LINKLIST_H
+#define DATASTRUCTURE_LINKLIST_H
+
+#endif //DATASTRUCTURE_LINKLIST_H

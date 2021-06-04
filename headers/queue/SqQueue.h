@@ -1,0 +1,8 @@
+//
+// Created by Jimmy on 2021/6/3.
+//
+
+#ifndef DATASTRUCTURE_SQQUEUE_H
+#define DATASTRUCTURE_SQQUEUE_H
+
+#endif //DATASTRUCTURE_SQQUEUE_H
