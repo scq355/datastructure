@@ -5,6 +5,7 @@
 #include "headers/stack/SqStack.h"
 #include "headers/queue/SqQueue.h"
 #include "headers/list/LinkList.h"
+#include "headers/list/SqList.h"
 
 int main() {
 //    cLinkListOperate();
@@ -20,5 +21,6 @@ int main() {
 //    tailOperate();
 //    mergeLinkListOperate();
 
-
+     sqListOperate();
+     mergeSqListOperate();
 }
