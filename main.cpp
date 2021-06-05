@@ -6,6 +6,8 @@
 #include "headers/queue/SqQueue.h"
 #include "headers/list/LinkList.h"
 #include "headers/list/SqList.h"
+#include "headers/list/DuLinkList.h"
+#include "headers/tree/HuffmanTree.h"
 
 int main() {
 //    cLinkListOperate();
@@ -21,6 +23,9 @@ int main() {
 //    tailOperate();
 //    mergeLinkListOperate();
 
-     sqListOperate();
-     mergeSqListOperate();
+//     sqListOperate();
+//     mergeSqListOperate();
+
+//    duLinkListOperate();
+    huffmanTreeOperate();
 }
