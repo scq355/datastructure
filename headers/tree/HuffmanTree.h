@@ -1,8 +1,0 @@
-//
-// Created by Jimmy on 2021/6/3.
-//
-
-#ifndef DATASTRUCTURE_HUFFMANTREE_H
-#define DATASTRUCTURE_HUFFMANTREE_H
-
-#endif //DATASTRUCTURE_HUFFMANTREE_H
