@@ -3,8 +3,11 @@
 
 CMakeFiles/datastructure.dir/main.cpp.o: ../headers/common/Constants.h
 CMakeFiles/datastructure.dir/main.cpp.o: ../headers/list/CLinkList.h
+CMakeFiles/datastructure.dir/main.cpp.o: ../headers/list/LinkList.h
 CMakeFiles/datastructure.dir/main.cpp.o: ../headers/queue/LinkQueue.h
+CMakeFiles/datastructure.dir/main.cpp.o: ../headers/queue/SqQueue.h
 CMakeFiles/datastructure.dir/main.cpp.o: ../headers/stack/LinkStack.h
+CMakeFiles/datastructure.dir/main.cpp.o: ../headers/stack/SqStack.h
 CMakeFiles/datastructure.dir/main.cpp.o: ../headers/tree/BiTree.h
 CMakeFiles/datastructure.dir/main.cpp.o: ../main.cpp
 
@@ -14,6 +17,8 @@ CMakeFiles/datastructure.dir/sources/list/CLinkList.cpp.o: ../sources/list/CLink
 
 CMakeFiles/datastructure.dir/sources/list/DuLinkList.cpp.o: ../sources/list/DuLinkList.cpp
 
+CMakeFiles/datastructure.dir/sources/list/LinkList.cpp.o: ../headers/common/Constants.h
+CMakeFiles/datastructure.dir/sources/list/LinkList.cpp.o: ../headers/list/LinkList.h
 CMakeFiles/datastructure.dir/sources/list/LinkList.cpp.o: ../sources/list/LinkList.cpp
 
 CMakeFiles/datastructure.dir/sources/list/SqList.cpp.o: ../sources/list/SqList.cpp
@@ -22,6 +27,8 @@ CMakeFiles/datastructure.dir/sources/queue/LinkQueue.cpp.o: ../headers/common/Co
 CMakeFiles/datastructure.dir/sources/queue/LinkQueue.cpp.o: ../headers/queue/LinkQueue.h
 CMakeFiles/datastructure.dir/sources/queue/LinkQueue.cpp.o: ../sources/queue/LinkQueue.cpp
 
+CMakeFiles/datastructure.dir/sources/queue/SqQueue.cpp.o: ../headers/common/Constants.h
+CMakeFiles/datastructure.dir/sources/queue/SqQueue.cpp.o: ../headers/queue/SqQueue.h
 CMakeFiles/datastructure.dir/sources/queue/SqQueue.cpp.o: ../sources/queue/SqQueue.cpp
 
 CMakeFiles/datastructure.dir/sources/stack/LinkStack.cpp.o: ../headers/common/Constants.h
