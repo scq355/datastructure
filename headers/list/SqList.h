@@ -8,24 +8,26 @@
 #endif //DATASTRUCTURE_SQLIST_H
 #include "../common/Constants.h"
 
-typedef struct {
-    int *elem;
+// 顺序表
+typedef struct
+{
+    int* elem;
     int length;
 } SqList;
 
-Status initList(SqList &L);
+Status initList(SqList& L);
 
-Status getElem(SqList L, int i, int &e);
+Status getElem(SqList& L, int i, int& e);
 
 int locateElem(SqList L, int e);
 
-Status insertList(SqList &L, int i, int e);
+Status insertList(SqList& L, int i, int e);
 
-Status deleteList(SqList &L, int i);
+Status deleteList(SqList& L, int i);
 
-void printList(SqList &L);
+void printList(const SqList& L);
 
-void mergeSqList(SqList &LA, SqList &LB, SqList &LC);
+void mergeSqList(const SqList& LA, const SqList& LB, SqList& LC);
 
 void sqListOperate();
 

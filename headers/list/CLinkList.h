@@ -1,6 +1,7 @@
 //
 // Created by Jimmy on 2021/6/3.
 //
+#include "LinkList.h"
 #include "../common/Constants.h"
 
 #ifndef DATASTRUCTURE_CLINKLIST_H
@@ -8,34 +9,37 @@
 
 #endif //DATASTRUCTURE_CLINKLIST_H
 
-typedef struct CLNode {
+// 循环列表
+typedef struct CLNode
+{
     int data;
-    struct CLNode *next;
+    struct CLNode* next;
 } CLNode, *CLinkList;
 
-Status initCLinkList(CLinkList &L);
+Status initCLinkList(CLinkList& L);
 
-Status getElem(CLinkList L, int i, int &e);
+Status getElem(CLinkList L, int i, int& e);
 
-CLNode *locateElem(CLinkList L, int e);
+CLNode* locateElem(CLinkList L, int e);
 
-int getCLinkListLength(CLinkList &L);
+int getCLinkListLength(CLinkList& L);
 
-Status cLinkListInsert(CLinkList &L, int i, int e);
+Status cLinkListInsert(CLinkList& L, int i, int e);
 
-Status cLinkListDelete(CLinkList &L, int i);
+Status cLinkListDelete(CLinkList& L, int i);
 
-void cLinkListPrint(CLinkList &L);
+void cLinkListPrint(CLinkList& L);
 
-void createCLinkListHead(CLinkList &L, int n);
+void createCLinkListHead(CLinkList& L, int n);
 
-CLNode *getTailNode(CLinkList &L);
+CLNode* getTailNode(CLinkList& L);
 
-void createCLinkListTail(CLinkList &L, int n);
+Status isTail(CLinkList L, CLNode* p);
 
-void mergeCLinkList(CLinkList &LA, CLinkList &LB, CLinkList &LC);
+void createCLinkListTail(CLinkList& L, int n);
+
+void mergeCLinkList(CLinkList& LA, CLinkList& LB, CLinkList& LC);
 
 void cLinkListOperate();
 
 void cLinkListHeadOperate();
-

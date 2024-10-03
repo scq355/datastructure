@@ -8,30 +8,40 @@
 
 #endif //DATASTRUCTURE_LINKLIST_H
 
-typedef struct LNode {
+// 链表
+typedef struct LNode
+{
     int data;
-    struct LNode *next;
+    struct LNode* next;
 } LNode, *LinkList;
 
-Status initList(LinkList &L);
+Status initList(LinkList& L);
 
-Status getElem(LinkList L, int i, int &e);
+Status getElem(LinkList L, int i, int& e);
 
-LNode *locateElem(LinkList L, int e);
+LNode* locateElem(LinkList L, int e);
 
-void printList(LinkList &L);
+void printList(LinkList& L);
+
+int length(LinkList L);
 
 void traverseList(LinkList L);
 
-void createListHead(LinkList &L, int n);
+void createListHead(LinkList& L, int n);
 
-void createListTail(LinkList &L, int n);
+void createListTail(LinkList& L, int n);
 
-Status insertList(LinkList &L, int i, int e);
+Status insertListBefore(LNode* p, int e);
 
-Status deleteList(LinkList &L, int i);
+Status insertListAfter(LNode* p, int e);
 
-void mergeLinkList(LinkList &LA, LinkList &LB, LinkList &LC);
+Status insertList(LinkList& L, int i, int e);
+
+Status deleteList(LinkList& L, int i, int& e);
+
+Status deleteNode(LNode* p);
+
+void mergeLinkList(LinkList& LA, LinkList& LB, LinkList& LC);
 
 void linkListOperate();
 

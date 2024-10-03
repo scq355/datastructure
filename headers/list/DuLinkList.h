@@ -8,25 +8,51 @@
 
 #endif //DATASTRUCTURE_DULINKLIST_H
 
-typedef struct DuLNode{
+// 双向列表
+typedef struct DuLNode
+{
     int data;
-    struct DuLNode *prior;
-    struct DuLNode *next;
+    struct DuLNode* prior;
+    struct DuLNode* next;
 } DuLNode, *DuLinkList;
 
 
-Status initDuLinkList(DuLinkList &L);
+Status initDuLinkList(DuLinkList& L);
 
-DuLNode *locateEnumDuLinkList(DuLinkList &L, int i);
+/**
+ * 初始化循环双列表
+ */
+Status initCDuLinkList(DuLinkList& L);
 
-DuLNode *getElemDuLinkList(DuLinkList &L, int e);
+Status empty(DuLinkList L);
 
-Status createDuLinkListHead(DuLinkList &L, int e);
+Status emptyCDuLinkList(DuLinkList L);
 
-Status createDuLinkListTail(DuLinkList &L, int e);
+/**
+ * 判断节点p是否为循环双列表尾结点
+ */
+Status isTailCDuLinkList(DuLinkList L, DuLNode* p);
 
-Status deleteDuLinkList(DuLinkList &L, int i);
+// p节点后插入s节点
+Status insertNextDuNode(DuLNode* p, DuLNode* s);
 
-void printDuLinkList(DuLinkList &L);
+DuLNode* locateEnumDuLinkList(DuLinkList& L, int i);
+
+DuLNode* getElemDuLinkList(DuLinkList& L, int e);
+
+Status createDuLinkListHead(DuLinkList& L, int e);
+
+Status createDuLinkListTail(DuLinkList& L, int e);
+
+Status deleteDuLinkList(DuLinkList& L, int i);
+
+/**
+* 删除p节点的后继节点
+*/
+Status deleteNextNode(DuLNode* p);
+
+void destroyDuList(DuLinkList& L);
+
+void printDuLinkList(DuLinkList& L);
 
 void duLinkListOperate();

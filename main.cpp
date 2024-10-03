@@ -10,7 +10,7 @@
 #include "headers/tree/HuffmanTree.h"
 
 int main() {
-//    cLinkListOperate();
+    // cLinkListOperate();
 //    cLinkListHeadOperate();
 //    biTreeOperate();
 //    linkStackOperate();
@@ -23,9 +23,9 @@ int main() {
 //    tailOperate();
 //    mergeLinkListOperate();
 
-//     sqListOperate();
-//     mergeSqListOperate();
+     sqListOperate();
+     // mergeSqListOperate();
 
 //    duLinkListOperate();
-    huffmanTreeOperate();
+    // huffmanTreeOperate();
 }
