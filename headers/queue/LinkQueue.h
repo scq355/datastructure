@@ -9,25 +9,29 @@
 #endif //DATASTRUCTURE_LINKQUEUE_H
 
 
-typedef struct QNode {
+typedef struct QNode
+{
     int data;
-    struct QNode *next;
+    struct QNode* next;
 } QNode, *QueuePtr;
 
-typedef struct {
+typedef struct
+{
     QueuePtr front;
     QueuePtr rear;
 } LinkQueue;
 
 
-Status initQueue(LinkQueue &Q);
+Status initQueue(LinkQueue& Q);
 
-Status enQueue(LinkQueue &Q, int e);
+Status isEmpty(LinkQueue Q);
 
-Status deQueue(LinkQueue &Q, int &e);
+Status enQueue(LinkQueue& Q, int e);
+
+Status deQueue(LinkQueue& Q, int& e);
 
 int getHead(LinkQueue Q);
 
-void linkQueuePrint(LinkQueue &Q);
+void linkQueuePrint(LinkQueue& Q);
 
 void linkQueueOperate();

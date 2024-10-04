@@ -8,30 +8,35 @@
 
 #endif //DATASTRUCTURE_SQSTACK_H
 
-typedef struct {
-    int *base;
-    int *top;
+typedef struct
+{
+    int* base;
+    int* top;
     int stackSize;
 } SqStack;
 
-Status initStack(SqStack &S);
+// typedef struct
+// {
+//     int data[MAXSIZE];
+//     int top;
+// } SqStack;
 
-Status stackEmpty(SqStack &S);
+Status initStack(SqStack& S);
 
-int stackLength(SqStack &S);
+Status stackEmpty(SqStack& S);
 
-Status push(SqStack &S, char e);
+int stackLength(SqStack& S);
 
-Status pop(SqStack &S, char &e);
+Status push(SqStack& S, int e);
 
-Status destoryStack(SqStack &S);
+Status pop(SqStack& S, int& e);
 
-Status clearStack(SqStack &S);
+Status destoryStack(SqStack& S);
+
+Status clearStack(SqStack& S);
 
 int getTop(SqStack S);
 
-void stackTraverse(SqStack &S);
+void stackTraverse(SqStack& S);
 
 void sqStackOperate();
-
-

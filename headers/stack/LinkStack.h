@@ -7,19 +7,20 @@
 
 #endif //DATASTRUCTURE_LINKSTACK_H
 
-typedef struct StackNode {
+typedef struct StackNode
+{
     int data;
     struct StackNode* next;
 } StackNode, *LinkStack;
 
-Status initLintStack(LinkStack &S);
+Status initLintStack(LinkStack& S);
 
-Status pushLinkStack(LinkStack &S, int e);
+Status pushLinkStack(LinkStack& S, int e);
 
-Status popLinkStack(LinkStack &S, int &e);
+Status popLinkStack(LinkStack& S, int& e);
 
-void linkStackTraverse(LinkStack &S);
+void linkStackTraverse(LinkStack& S);
 
-int getLinkStackTop(LinkStack &S);
+int getLinkStackTop(LinkStack& S);
 
 void linkStackOperate();

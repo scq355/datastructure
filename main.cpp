@@ -15,7 +15,7 @@ int main() {
 //    biTreeOperate();
 //    linkStackOperate();
 //    linkQueueOperate();
-//    sqStackOperate();
+    sqStackOperate();
 //    sqQueueOperate();
 
 //    linkListOperate();
@@ -23,7 +23,7 @@ int main() {
 //    tailOperate();
 //    mergeLinkListOperate();
 
-     sqListOperate();
+     // sqListOperate();
      // mergeSqListOperate();
 
 //    duLinkListOperate();

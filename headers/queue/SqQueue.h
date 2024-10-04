@@ -8,19 +8,20 @@
 
 #endif //DATASTRUCTURE_SQQUEUE_H
 
-typedef struct {
-    int *base;
+typedef struct
+{
+    int* base;
     int front;
     int rear;
 } SqQueue;
 
-Status initQueue(SqQueue &Q);
+Status initQueue(SqQueue& Q);
 
 int queueLength(SqQueue Q);
 
-Status enQueue(SqQueue &Q, int e);
+Status enQueue(SqQueue& Q, int e);
 
-Status deQueue(SqQueue &Q, int &e);
+Status deQueue(SqQueue& Q, int& e);
 
 int getHead(SqQueue Q);
 
