@@ -30,6 +30,8 @@ Status enQueue(LinkQueue& Q, int e);
 
 Status deQueue(LinkQueue& Q, int& e);
 
+Status deQueue(LinkQueue& Q, char& e);
+
 int getHead(LinkQueue Q);
 
 void linkQueuePrint(LinkQueue& Q);

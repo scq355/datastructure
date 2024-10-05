@@ -51,6 +51,27 @@ Status deQueue(LinkQueue& Q, int& e)
     return OK;
 }
 
+
+Status deQueue(LinkQueue& Q, char& e)
+{
+    // 空队
+    if (Q.front == Q.rear)
+    {
+        return ERROR;
+    }
+    QNode* p = Q.front->next;
+    e = p->data;
+    // 修改头结点的next指针
+    Q.front->next = p->next;
+    // 最后一个节点出队
+    if (Q.rear == p)
+    {
+        Q.rear = Q.front;
+    }
+    free(p);
+    return OK;
+}
+
 int getHead(LinkQueue Q)
 {
     if (Q.front != Q.rear)

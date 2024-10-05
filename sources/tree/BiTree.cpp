@@ -3,24 +3,30 @@
 //
 #include "../../headers/tree/BiTree.h"
 
-void firstTraverseRecursion(BiTree T) {
-    if (T) {
+void firstTraverseRecursion(BiTree T)
+{
+    if (T)
+    {
         printf("%c ", T->data);
         firstTraverseRecursion(T->l_child);
         firstTraverseRecursion(T->r_child);
     }
 }
 
-void inOrderTraverseRecursion(BiTree T) {
-    if (T) {
+void inOrderTraverseRecursion(BiTree T)
+{
+    if (T)
+    {
         inOrderTraverseRecursion(T->l_child);
         printf("%c ", T->data);
         inOrderTraverseRecursion(T->r_child);
     }
 }
 
-void lastTraverseRecursion(BiTree T) {
-    if (T) {
+void lastTraverseRecursion(BiTree T)
+{
+    if (T)
+    {
         lastTraverseRecursion(T->l_child);
         lastTraverseRecursion(T->r_child);
         printf("%c ", T->data);
@@ -28,14 +34,19 @@ void lastTraverseRecursion(BiTree T) {
 }
 
 // 1 2 # # 4 5 # 6 # # # #
-void createBiTree(BiTree &T) {
+void createBiTree(BiTree& T)
+{
     char ch;
     scanf("%c ", &ch);
-    if (ch == '#') {
+    if (ch == '#')
+    {
         T = nullptr;
-    } else {
-        T = (BiTNode *) malloc(sizeof(BiTNode));
-        if (!T) {
+    }
+    else
+    {
+        T = (BiTNode*)malloc(sizeof(BiTNode));
+        if (!T)
+        {
             return;
         }
         T->data = ch;
@@ -44,11 +55,36 @@ void createBiTree(BiTree &T) {
     }
 }
 
-void copyBiTree(BiTree T, BiTree &newT) {
-    if (T == nullptr) {
+void levelOrder(BiTree T)
+{
+    LinkQueue Q;
+    initQueue(Q);
+    BiTree p;
+    enQueue(Q, T->data);
+    while (isEmpty(Q))
+    {
+        deQueue(Q, p->data);
+        printf("%c ", p->data);
+        if (p->l_child != nullptr)
+        {
+            enQueue(Q, p->l_child->data);
+        }
+        if (p->r_child != nullptr)
+        {
+            enQueue(Q, p->r_child->data);
+        }
+    }
+}
+
+void copyBiTree(BiTree T, BiTree& newT)
+{
+    if (T == nullptr)
+    {
         newT = nullptr;
         return;
-    } else {
+    }
+    else
+    {
         newT = new BiTNode;
         newT->data = T->data;
         copyBiTree(T->l_child, newT->l_child);
@@ -56,29 +92,42 @@ void copyBiTree(BiTree T, BiTree &newT) {
     }
 }
 
-int biTreeDepth(BiTree T) {
-    if (T == nullptr) {
+int biTreeDepth(BiTree T)
+{
+    if (T == nullptr)
+    {
         return ZERO;
-    } else {
-        int m = biTreeDepth(T->l_child);
-        int n = biTreeDepth(T->r_child);
-        if (m > n) {
-            return m + 1;
-        } else {
-            return n + 1;
+    }
+    else
+    {
+        int l = biTreeDepth(T->l_child);
+        int r = biTreeDepth(T->r_child);
+        // 树的深度 = MAX(左子树深度，右子树深度) + 1
+        if (l > r)
+        {
+            return l + 1;
+        }
+        else
+        {
+            return r + 1;
         }
     }
 }
 
-int biNodeCount(BiTree T) {
-    if (T == nullptr) {
+int biNodeCount(BiTree T)
+{
+    if (T == nullptr)
+    {
         return ZERO;
-    } else {
+    }
+    else
+    {
         return biNodeCount(T->l_child) + biNodeCount(T->r_child) + 1;
     }
 }
 
-void biTreeOperate() {
+void biTreeOperate()
+{
     BiTree T;
     printf("创建一棵二叉树：");
     createBiTree(T);
