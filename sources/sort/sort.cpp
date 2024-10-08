@@ -1,3 +1,4 @@
+#include <cstdlib>
 //
 // Created by scq355 on 2024/10/6.
 //
@@ -136,6 +137,7 @@ int partition(int a[], int low, int high)
     a[low] = pivot;
     return low;
 }
+
 // 快速排序
 void quick_sort(int a[], int low, int high)
 {
@@ -146,6 +148,7 @@ void quick_sort(int a[], int low, int high)
         quick_sort(a, pivot + 1, high);
     }
 }
+
 // 简单选择排序
 void select_sort(int a[], int n)
 {
@@ -163,5 +166,48 @@ void select_sort(int a[], int n)
         {
             swap(a[i], a[min]);
         }
+    }
+}
+
+#define n 20
+
+int* b = (int*)malloc(n * sizeof(int));
+
+void merge(int a[], int low, int mid, int high)
+{
+    int i, j, k;
+    for (k = low; k <= high; k++)
+    {
+        b[k] = a[k];
+    }
+    for (i = low, j = mid + 1, k = i; i <= mid && j <= high; k++)
+    {
+        if (b[i] <= b[j])
+        {
+            a[k] = b[i++];
+        }
+        else
+        {
+            a[k] = b[j++];
+        }
+    }
+    while (i <= mid)
+    {
+        a[k++] = b[i++];
+    }
+    while (j <= high)
+    {
+        a[k++] = b[j++];
+    }
+}
+// 归并排序
+void merge_sort(int a[], int low, int high)
+{
+    if (low < high)
+    {
+        int mid = (low + high) / 2;
+        merge_sort(a, low, mid);
+        merge_sort(a, mid + 1, high);
+        merge(a, low, mid, high);
     }
 }
